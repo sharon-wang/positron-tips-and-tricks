@@ -1,0 +1,710 @@
+Tips & Tricks from the maintainers of Positron
+Sharon Wang & Melissa Barca
+
+September 17, 2025
+[MELISSA]
+
+Hello! I’m Melissa and this is Sharon, and we’re two of the developers working on Positron
+
+Through developing Positron, connecting with users in our github repo, and our own personal  experiences using code editors, we’ve collected some tips and tricks to share with you today.
+We hope there’s something in here for everyone whether you’ve yet to download Positron or you’ve been following the dailies from the start.
+1
+
+Today, we’ve got tips & tricks for…
+Personalizing your coding space
+
+
+Making data exploration more pleasant
+
+
+Thoughtful pairing with Positron Assistant
+
+[MELISSA]
+
+We’ve organized the tips into three sections:
+
+First, we’ll cover navigating Positron and a few ways you may want to personalize your coding space.
+
+Then, we'll dive into how you can set yourself up for a more pleasant data exploration experience with a closer look at our editing and plotting tools..
+
+Finally, we'll cover some tricks on how to effectively pair with Positron’s AI Assistant – currently available as a Preview Feature – Positron Assistant ’
+
+2
+
+Set up the essentials
+Figure out your comfy layout
+Personalizing your coding space
+[MELISSA]
+
+Now, let’s begin with personalizing your coding space! 
+We'll show you how to effectively navigate through Positron and configure your layout and settings.
+3
+
+Command Palette
+
+Run any command, install extensions, toggle settings
+
+Great for discovering what’s possible
+Press Ctrl+Shift+P / Cmd+Shift+P to open
+[MELISSA]
+
+First off, let’s familiarize ourselves with the Command Palette.
+
+The command palette is a text driven interface that allows you to execute almost any action possible in Positron. It’s the gateway to finding and running any command without clicking through menus or memorizing shortcuts. 
+
+It’s fuzzy-searchable so even if you don’t know the exact command name or if you aren’t sure what commands are available, you can type a few words to  see what your options are.
+
+This feature allows you to quickly access many of the other tips and tricks we have for you today. If you’re not already using the command palette daily, this is a great habit to build to help you explore and familiarize yourself with all of Positron’s capabilities.
+
+4
+
+Run command Welcome: Open Walkthrough…
+Walkthroughs
+>welcome open
+  Welcome: Open Walkthrough…
+[SHARON]
+
+let’s start building that habit right away
+
+we’ll open up the Command Palette
+
+and run the command “Welcome: Open Walkthrough”
+5
+
+Run command Welcome: Open Walkthrough…
+Walkthroughs
+>welcome open
+  Welcome: Open Walkthrough…
+Then type “migrating” and select a walkthrough
+[SHARON]
+
+then, we’ll type “migrating” and open up one of these walkthroughs
+
+6
+
+Walkthroughs
+VS Code to Positron
+
+RStudio to Positron
+[SHARON]
+
+and the selected walkthrough will open up in Positron. Here’s a peek at what they look like
+If you’re a VS Code or RStudio user, these help you migrate over and get situated in Positron
+7
+
+Layout
+Looking for a four pane data science layout?
+image from https://positron.posit.co/layout.html#basic-overview 
+Run command View: Stacked Layout
+>view stacked
+  View: Stacked Layout
+[SHARON]
+
+next up, let’s talk about your IDE layout
+if you’re coming from RStudio, you might be looking for a four-pane data science layout
+To get this layout, run the command “View: Stacked Layout”...
+…
+
+8
+
+Layout
+Looking for a four pane data science layout?
+
+Run command View: Stacked Layout
+Files
+Plots
+Variables
+Code
+Console
+[SHARON]
+
+…and you’ll be set up with your files, code editor, variables, console, and plots all in one view
+
+9
+
+Layout
+For even more customization…
+Run command Customize Layout… or search for view layout
+[SHARON]
+
+for even more customization, check out the “Customize Layout…” command
+or, here we search for “view layout” via the Command Palette for even more layout options
+
+
+10
+
+Interpreter Picker
+Indicates the active Console session and helps us populate the Variables
+[SHARON]
+
+Now, let’s jump over to the interpreter picker in the top-right of Positron
+The picker shows the interpreter for the active Console session
+The active session provides the data you see in the Variables pane
+the picker is especially helpful when you have multiple console sessions going, so you can tell which session is currently active
+11
+
+Console
+Multiple R and Python sessions are possible!
+[SHARON]
+
+speaking of multiple sessions…here’s how you can create them for various R and Python runtimes
+From the Console, click on the “plus” button to create an additional session with the active interpreter
+or pictured here, you can click into the “plus” button dropdown to use a different interpreter
+
+12
+
+Console
+Right-click to rename sessions
+
+Feel free to use emojis ✨
+[SHARON]
+
+if you’ve got a few consoles going, it can get confusing which console is for what!
+to alleviate this possible confusion, right-click on a session to rename it
+if you want, you can even include emojis!
+
+
+13
+
+Console
+Click on the info icon for more details about your session
+
+[SHARON]
+
+one more console tip…
+if you click the info button for a console session, you’ll see metadata about the session, such as 
+the interpreter path
+as well as quick links to relevant output channel logs
+For more on Multi-Console, Dhruvi Sompura has a talk about this in the Lightning Talks session later today!
+14
+
+Custom Keybindings
+Run command Preferences: Open Keyboard Shortcuts
+>keyboard
+Preferences: Open Keyboard Shortcuts
+[MELISSA]
+
+Up next we have keybindings.
+
+You’re likely already familiar with what a keybinding is, but let’s define it as the association of a specific key or combination of keys with a command.
+
+To get to the keybindings UI, run the command “Preferences: open keyboard shortcuts”
+
+…
+15
+
+Custom Keybindings
+Assign any Command Palette command to a hotkey
+
+Run command Preferences: Open Keyboard Shortcuts
+>keyboard
+Preferences: Open Keyboard Shortcuts
+[MELISSA]
+
+You can bind any command you can open in the Command Palette.
+
+When you find yourself using the same command frequently, check if a keybinding exists for that command and add one if it does not.
+
+The simplest way to do this it to use the Keyboard Shortcuts editor
+
+
+
+16
+
+Add more complex keyboard shortcuts to the keybindings.json file
+
+Custom Keybindings
+Run command Preferences: Open Keyboard Shortcuts (JSON)
+>keyboard json
+Preferences: Open Keyboard Shortcuts (JSON)
+[MELISSA]
+
+For more granularity, you can edit keybindings.json directly. Run the command “Preferences: Open Keyboard Shortcuts JSON” to pull up the file.
+
+For example, There is a built-in command called runCommands that allows you to execute a chain of commands from a single keybinding. 
+
+17
+
+Use built-in runCommands to chain actions together (e.g. restart the terminal)
+
+Custom Keybindings
+Run command Preferences: Open Keyboard Shortcuts (JSON)
+>keyboard json
+Preferences: Open Keyboard Shortcuts (JSON)
+[MELISSA]
+
+In this snippet I use runCommands to chain together the kill terminal and new terminal commands, to create a quick way to restart my terminal.
+
+I used the when clause to limit this binding to only activate when my focus is in the terminal, leaving the keyboard combination available for other scenarios. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+—
+
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>keybindings.json</strong></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" data-filename="keybindings.json" style="
+    background-color: #213d4f !important;
+"><pre class="sourceCode json code-with-copy"><code class="sourceCode json"><span id="cb2-1"><a href="http://localhost:7920/troubleshooting.html#cb2-1" aria-hidden="true" tabindex="-1" data-original-href="http://localhost:7920/troubleshooting.html#cb2-1"></a><span class="fu">{</span></span>
+<span id="cb2-2"><a href="http://localhost:7920/troubleshooting.html#cb2-2" aria-hidden="true" tabindex="-1" data-original-href="http://localhost:7920/troubleshooting.html#cb2-2"></a>    <span class="dt">"key"</span><span class="fu">:</span> <span class="st">"shift+cmd+9"</span><span class="fu">,</span></span>
+<span id="cb2-3"><a href="http://localhost:7920/troubleshooting.html#cb2-3" aria-hidden="true" tabindex="-1" data-original-href="http://localhost:7920/troubleshooting.html#cb2-3"></a>    <span class="dt">"command"</span><span class="fu">:</span> <span class="st">"runCommands"</span><span class="fu">,</span></span>
+<span id="cb2-4"><a href="http://localhost:7920/troubleshooting.html#cb2-4" aria-hidden="true" tabindex="-1" data-original-href="http://localhost:7920/troubleshooting.html#cb2-4"></a>    <span class="dt">"args"</span><span class="fu">:</span> <span class="fu">{</span></span>
+<span id="cb2-5"><a href="http://localhost:7920/troubleshooting.html#cb2-5" aria-hidden="true" tabindex="-1" data-original-href="http://localhost:7920/troubleshooting.html#cb2-5"></a>        <span class="dt">"commands"</span><span class="fu">:</span> <span class="ot">[</span></span>
+<span id="cb2-6"><a href="http://localhost:7920/troubleshooting.html#cb2-6" aria-hidden="true" tabindex="-1" data-original-href="http://localhost:7920/troubleshooting.html#cb2-6"></a>            <span class="st">"workbench.action.terminal.kill"</span><span class="ot">,</span></span>
+<span id="cb2-7"><a href="http://localhost:7920/troubleshooting.html#cb2-7" aria-hidden="true" tabindex="-1" data-original-href="http://localhost:7920/troubleshooting.html#cb2-7"></a>            <span class="st">"workbench.action.terminal.new"</span></span>
+<span id="cb2-8"><a href="http://localhost:7920/troubleshooting.html#cb2-8" aria-hidden="true" tabindex="-1" data-original-href="http://localhost:7920/troubleshooting.html#cb2-8"></a>        <span class="ot">]</span></span>
+<span id="cb2-9"><a href="http://localhost:7920/troubleshooting.html#cb2-9" aria-hidden="true" tabindex="-1" data-original-href="http://localhost:7920/troubleshooting.html#cb2-9"></a>    <span class="fu">},</span></span>
+<span id="cb2-10"><a href="http://localhost:7920/troubleshooting.html#cb2-10" aria-hidden="true" tabindex="-1" data-original-href="http://localhost:7920/troubleshooting.html#cb2-10"></a>    <span class="dt">"when"</span><span class="fu">:</span> <span class="st">"terminal.active"</span></span>
+<span id="cb2-11"><a href="http://localhost:7920/troubleshooting.html#cb2-11" aria-hidden="true" tabindex="-1" data-original-href="http://localhost:7920/troubleshooting.html#cb2-11"></a><span class="fu">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+
+18
+
+Editing and Authoring with more fluidity
+Making data exploration more pleasant
+[MELISSA]
+
+Now that you’ve learned some ways to personalize your Positron setup, let’s dive into tips for exploring your data.
+
+19
+
+Data Explorer
+View your data in a friendly interface
+Summary  Panel
+Data Grid
+Filter Bar
+[MELISSA]
+
+First up, let’s talk about the Data Explorer.
+
+The interface is divided into a filter bar, data grid, and  summary panel.
+
+The summary panel shows each column’s name, its data type, and the percentage of missing values. It even includes a small histogram 
+You can view data frames you’ve loaded into your session variables, but you can also…
+
+20
+
+Data Explorer
+Click to view your data files in the Data Explorer
+
+data.csv open in the Data Explorer
+[MELISSA]
+
+Click on your data file in the file explorer and view it automatically in the data explorer
+
+
+21
+
+Data Explorer
+Compressed data files open just as smoothly
+
+
+
+customers-100000.csv.gz open in the Data Explorer
+[MELISSA]
+
+You can do this with compressed files as well. No manual unzipping required.
+
+[SHARON]
+
+what if I just want to see the raw CSV file?
+22
+
+Content subheader
+Bullets get smaller
+And smaller
+And smaller
+Data Explorer
+Open plain text as well
+
+[MELISSA]
+
+…as we see here, viewing your plain text file is also as simple as the click of a button. 
+
+You can easily open two tabs and switch between the data explorer and raw text file.
+
+The data explorer watches your source, so if you change the CSV file you’ll see the results reflected instantly, allowing you to quickly iterate on your work. 
+
+
+If you’re interested in learning more about the data explorer, stick around for Wes McKinney's talk, “Exploring Datasets in Positron”
+23
+
+Has this ever happened to you?
+😵‍💫
+😵‍💫
+😵‍💫
+[SHARON]
+
+*click slide for emojis*
+
+now…have you ever found yourself lost in a sea of editor tabs, trying to find that one file?
+
+you’re scrolling back and forth through all the file tabs and you’re starting to forget which file you’re even looking for
+
+wouldn’t it be nice if your most important files could just be pinned, so you don’t lose them?
+
+Some good news…
+
+24
+
+Pinned editor tabs
+Right-click on an editor tab and select Pin
+how to pin a tab
+also this setting workbench.editor.pinnedTabsOnSeparateRow
+[SHARON]
+
+You can pin editor tabs, whether they’re code files, the Settings tab,  or a Data Explorer you want easy access to
+
+Just right-click on the editor tab and click Pin…
+25
+
+Pinned editor tabs
+Right-click on an editor tab and select Pin
+📌
+[SHARON]
+
+and those tabs will be pinned to the beginning of your open editors!
+
+[MELISSA]
+
+So I really love this feature, but sometimes I still feel like I’m getting lost in a sea of my PINNED editor tabs
+
+[SHARON]
+
+well, you may want to reevaluate which ones you REALLY need
+26
+
+Pinned editor tabs
+Keep pinned tabs on a separate row
+how to pin a tab
+also this setting workbench.editor.pinnedTabsOnSeparateRow
+In Settings, search for and enable Workbench > Editor: Pinned Tabs on Separate Row
+[SHARON]
+
+But! In the meantime,
+
+for a bit more pinned tab space
+
+search for the “Pinned Tabs on Separate Row” setting and enable it…
+
+…
+27
+
+Pinned editor tabs
+Keep pinned tabs on a separate row
+how to pin a tab
+also this setting workbench.editor.pinnedTabsOnSeparateRow
+In Settings, search for and enable Workbench > Editor: Pinned Tabs on Separate Row
+[SHARON]
+
+…and your pinned tabs will sit above your other tabs
+28
+
+Plots
+Looking for more real estate for your plots?
+
+
+🧐
+[SHARON]
+
+On to plots…
+
+do you ever wish you could open up your plot in a larger space?
+
+maybe you want to see the iris dataset in fullscreen?
+29
+
+Plots
+Looking for more real estate for your plots?
+
+
+Open plots in a new window or an editor tab for a larger viewing area
+[SHARON]
+
+You can do so by clicking on this button in the Plots Pane to open the plot in a new window or editor tab
+30
+
+✨ spontaneous theme change!
+[SHARON]
+
+alright, spontaneous theme change!!
+
+let’s switch over to Positron Dark here…
+
+[MELISSA]
+and oh uhhh…hmmm.. this plot is so bright, it’s ruining my dark mode now
+31
+
+✨ spontaneous theme change!
+🫣
+[MELISSA]
+
+and oh uhhh…hmmm.. this plot is so bright, it’s ruining my dark mode now
+
+[SHARON]
+
+this is what your plot will look like if you export it as an image
+
+but! during your authoring and editing process, we can de-ruin your Dark Mode 
+32
+
+Set the dark filter setting to Dark Filter for dark plots always, or set the filter to Follow Theme
+Plots
+🫣
+[SHARON]
+
+by clicking on this circle button in the Plots pane!
+this allows you to configure whether plots should have a filter applied to them
+by default, No Filter is applied, but you can configure this to Follow your Theme, or you can opt-in to dark filtered plots all the time!
+so let’s go ahead and choose “Follow Theme”
+33
+
+Set the dark filter setting to Dark Filter for dark plots always, or set the filter to Follow Theme
+Plots
+😌
+[SHARON]
+
+and with that, all is well now
+
+[MELISSA]
+
+Agreed, much better!
+34
+
+Enhancing your analysis with AI
+Thoughtful Pairing with Positron Assistant
+[MELISSA]
+
+With that, let’s move on to  talking about effectively pairing with Positron Assistant.
+
+
+35
+
+An AI client providing LLM integration in Positron
+
+Chat and inline completions
+
+Great for help with debugging, refactoring, and getting suggestions for next steps
+
+What is Positron Assistant?
+[MELISSA]
+
+Positron Assistant is an AI client that provides LLM integration with Positron through chat and inline completions. 
+
+It’s great for help with debugging, refactoring, or getting suggestions for next steps in your projects. 
+
+Two concepts to understand to make the best use of Assistant are context and tools.
+
+36
+
+Context beyond files on disk
+Aware of active console/runtime
+Aware of structure of in-memory objects
+Ask questions about your variables and console session
+[MELISSA]
+
+Context refers to the information Positron Assitant provides to the LLM alongside your prompt. 
+
+Positron Assistant provides context about files and folders, and it also provides dynamic in memory data from your session.
+
+This includes your loaded variables, plots pane, active console session, and session state. With your permission, assistant can even run code directly in your active session.
+
+You can take advantage of this context by asking assistant to plot data frames for you or tweak things like the title or axis labels on  your plots.
+
+37
+
+Click the eye icon to enable or disable session context
+Configuring access to session context
+Asking about the current plot with Console session enabled in context
+[MELISSA]
+
+You can view what context Assistant is providing to the LLM in your chat context.
+
+Here we ask Assistant about the current plot with the console session enabled as context. Assistant has access to review the code that generated the plot, as well as the plot image itself.
+The open eye icon indicates that the context is visible to assistant.
+
+[SHARON]
+
+What if I want my session context to be INVISIBLE to assistant?
+
+[MELISSA]
+
+You can control what context PA sends to the LLM. Whether you have security concerns or the session is irrelevant to your prompt, you can disable it as context by clicking the eye icon. 
+38
+
+Asking about the current plot with Console session disabled in context
+Click the eye icon to enable or disable session context
+Configuring access to session context
+[MELISSA]
+
+In this example, we’ve removed access to the console session context.
+
+Assistant is aware that you have a plot in your session, but cannot view the plot, nor see the code that led to the creation of the plot
+
+39
+
+opt-out of including session; add additional files, info to session, you can also attach a commit to your context
+Adding more context
+Click the 📎 Add Context… button in the chat input box to attach context to your request
+
+[MELISSA]
+
+Providing relevant contextual information can yield better results from the AI models and there may be even more context you want to provide to Assistant
+
+Click the Add Context button to attach additional context such as  files and folders or even additional interpreter sessions.
+40
+
+Retrieve helpful context to include with your prompt
+Tools
+[SHARON]
+
+Much of this context is passed to the LLM through tool calling.
+
+For example, if you ask a question about the current plot, Positron Assistant will call the “get plot” tool, so that the active plot image can be included with your question
+
+Without the get plot tool, the AI model isn’t able to see your plot
+41
+
+Look for a green checkmark, which denotes that a tool call has been made
+Tools
+👁️
+[SHARON]
+
+You can tell when Assistant calls a tool
+
+by keeping an eye out for this green checkmark,
+
+followed by some text describing an action
+
+like “Viewed the active plot” in this case
+42
+
+Click the 📎 Add Context… button in the chat input box to attach context to your request
+
+Then, click the 🛠️ Tools… option to view the tools available as attachments
+opt-out of including session; add additional files, info to session, you can also attach a commit to your context
+Attaching tools as context
+[SHARON]
+
+By default, Assistant will call tools that seem relevant to your prompt
+
+However, it can be helpful to attach tools as context, if you want Assistant to utilize specific tools with your prompt
+
+First, click “Add Context” in the chat
+
+Then click “Tools” to pick a tool
+
+43
+
+Tool: Help with R Packages and Vignettes
+Get help which directly references package documentation and vignettes
+[SHARON]
+
+Let’s take a look at a couple other tools available with Positron Assistant
+
+The “Get an R Help Page” tool looks at your current R session and loaded packages to retrieve help and vignettes content for a package
+
+The AI model is provided with this content, so you get guidance DIRECTLY based on the package’s documentation
+44
+
+Git integration
+Ask Assistant to explain the git tracked #changes you’ve made to your files
+
+[SHARON]
+
+Another tool Positron Assistant provides is the “Get changed files” tool, which retrieves your file modifications from git
+
+To invoke this tool, include #changes in your message to assistant.
+
+For example, here we’ve asked “tell me about the #changes I’ve made”
+
+[MELISSA]
+
+Wait so if assistant can understand my changes, does that mean it can just write my commit message?
+
+[SHARON]
+
+yeah! you could ask “generate a commit message for my #changes”
+45
+
+Git integration
+From the Source Control tab, click the ✨ sparkles icon to generate a commit message
+
+[SHARON]
+
+or, here, we’ve added axolotl and kangaroo to our code
+
+and from the source control panel
+
+we’ve clicked the sparkles in the commit message box
+
+and Positron Assistant has generated the commit message for us
+46
+
+Git integration
+Attach a commit as context to get a summary or explanation of the changes
+
+[SHARON]
+
+Calling back to attaching context, you can select “Source Control..” and choose a specific commit to include with your message
+Sometimes, a lot of code can change in a commit, or maybe the commit modifies code you’re unfamiliar with
+You can attach the commit as context, and ask Assistant to help you understand or summarize the changes
+47
+
+Positron Assistant
+To try Positron Assistant, enable the positron.assistant.enable setting
+
+🔗 positron.posit.co/assistant
+Preview 
+[SHARON]
+
+With these tips in mind, we welcome you to try out Positron Assistant, which is currently in preview
+
+To use Positron Assistant, you’ll need to enable the positron.assistant.enable setting in Positron
+
+For more on Positron Assistant, check out our docs at positron.posit.co/assistant
+48
+
+Other Positron-related sessions at conf:
+
+Talks in this room right after this by Austin Dickey and Wes McKinney!
+Multiple Console Sessions in Positron, Dhruvi Sompura
+Air - A blazingly fast R code formatter, Davis Vaughn, Lionel Henry
+How I got unstuck with Python, Julia Silge
+Positron Assistant Live Demo, George Stagg
+Databot Live Demo, Winston Chang
+
+Stop by the Positron Lounge (Centennial Foyer) for a hands-on Positron Assistant demo, Q&As and more!
+Thank you :)
+Positron docs: positron.posit.co
+Positron repo: github.com/posit-dev/positron
+[SHARON]
+
+Alright! We realize we went over a bunch of tips & tricks just now
+
+if you missed anything in this talk, conf slides will be uploaded post-conf, so keep an eye out for that!
+
+to learn more about Positron at conf, Austin’s up next to talk about Remote SSH in Positron and Wes shortly after with a talk on the Data Explorer;
+
+we’ve collected a few other Positron-related conf talks and demos you may be interested in. look these up in the conf schedule!
+
+We also welcome you to stop by the Positron Lounge just outside this room for a hands-on Positron Assistant demo and if you wanna chat with Positron devs including usl
+
+Alright! Thank you so much for listening! We’ll open it up for questions now :)
+49

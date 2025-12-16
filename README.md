@@ -6,7 +6,7 @@ This repo hosts [Sharon Wang](https://github.com/sharon-wang) and [Melissa Barca
 
 ## Recording
 
-TBD!
+Available on YouTube: [Tips & tricks from the maintainers of Positron (Sharon Wang & Melissa Barca) | posit::conf(2025)](https://www.youtube.com/watch?v=7Tog8OkrIWI)
 
 ## Abstract
 
